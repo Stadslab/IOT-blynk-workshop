@@ -1,12 +1,13 @@
 #include <Blynk.h>
 #include <Arduino.h>
 #define BLYNK_PRINT Serial
-#include <Adafruit_Sensor.h>
 #include <ESP8266WiFi.h>
+#include <Adafruit_Sensor.h>
 #include <BlynkSimpleEsp8266.h>
- char auth[] = "BLYNK AUTH CODE";
+char auth[] = "BLYNK AUTH CODE";
 char ssid[] = "WIFI SSID";
 char pass[] = "WIFI PASSWORD";
+ 
  
 //define DHT
 #include <DHT.h>
@@ -75,6 +76,14 @@ void pushy(){
  
 //void ultrasoon lcd print
 void printtje(){
+ digitalWrite(ping, LOW);
+ delayMicroseconds(2);
+ digitalWrite(ping, HIGH);
+ delayMicroseconds(2);
+ digitalWrite(ping, LOW);
+ tijd = pulseIn(echo, HIGH);
+ afstand = tijd*0.034/2;
+
  vlcd.print(0,1,"     ");
  teller=0;
  if (afstand > 50){
@@ -102,13 +111,6 @@ void sendSensor()
 //algemeen loop
 void loop(){
  Blynk.run();
- digitalWrite(ping, LOW);
- delayMicroseconds(2);
- digitalWrite(ping, HIGH);
- delayMicroseconds(2);
- digitalWrite(ping, LOW);
- tijd = pulseIn(echo, HIGH);
- afstand = tijd*0.034/2;
  teller = teller + 1;
  if (teller>telnummer) {
  printtje();
