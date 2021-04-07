@@ -3,6 +3,7 @@ Stadslab IOT workshop using Blynk Library and ESP8266
 
 ##Hardware list
 * NodeMCU v2
+* HC-SR04 ultrasonic sensor
 * DHT11
 * Button
 * RGB LED
@@ -12,6 +13,5 @@ Stadslab IOT workshop using Blynk Library and ESP8266
 
 ## Hardware setup
 ![](/IOT-setup2.jpg)
-
 
 http://stadslabrotterdam.nl/
