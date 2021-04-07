@@ -11,8 +11,7 @@ Stadslab IOT workshop using Blynk Library and ESP8266
 * Assorted wires
 
 ## Hardware setup
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/IOT-setup2.jpg?raw=true)
+![](/IOT-setup2.jpg)
 
 
-![](https://stadslabrotterdam.nl/assets/svg/logo.svg | width=100)
 http://stadslabrotterdam.nl/
