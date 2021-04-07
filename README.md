@@ -4,7 +4,7 @@ Stadslab IOT workshop using Blynk Library and ESP8266
 This is the arduino-IDE version of this project.
 [click here for platform-IO version](../../tree/platform-IO)
 
-##Hardware list
+## Hardware list
 * NodeMCU v2
 * HC-SR04 ultrasonic sensor
 * DHT11
