@@ -1,13 +1,12 @@
 #include <Blynk.h>
 #include <Arduino.h>
 #define BLYNK_PRINT Serial
+#include <Adafruit_Sensor.h>
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
-char auth[] = "BLYNK AUTH CODE";
-char ssid[] = "WIFI SSID";
-char pass[] = "WIFI PASSWORD";
- 
- 
+//  char auth[] = "BLYNK AUTH CODE";
+// char ssid[] = "WIFI SSID";
+// char pass[] = "WIFI PASSWORD";
  
 //define DHT
 #include <DHT.h>
