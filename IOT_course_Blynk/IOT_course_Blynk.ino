@@ -76,6 +76,14 @@ void pushy(){
  
 //void ultrasoon lcd print
 void printtje(){
+ digitalWrite(ping, LOW);
+ delayMicroseconds(2);
+ digitalWrite(ping, HIGH);
+ delayMicroseconds(2);
+ digitalWrite(ping, LOW);
+ tijd = pulseIn(echo, HIGH);
+ afstand = tijd*0.034/2;
+
  vlcd.print(0,1,"     ");
  teller=0;
  if (afstand > 50){
@@ -103,13 +111,7 @@ void sendSensor()
 //algemeen loop
 void loop(){
  Blynk.run();
- digitalWrite(ping, LOW);
- delayMicroseconds(2);
- digitalWrite(ping, HIGH);
- delayMicroseconds(2);
- digitalWrite(ping, LOW);
- tijd = pulseIn(echo, HIGH);
- afstand = tijd*0.034/2;
+
  teller = teller + 1;
  if (teller>telnummer) {
  printtje();
