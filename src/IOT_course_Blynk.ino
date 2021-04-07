@@ -1,12 +1,16 @@
-#include <Blynk.h>
 #include <Arduino.h>
+#include <Adafruit_Sensor.h>
+#include <Blynk.h>
 #define BLYNK_PRINT Serial
 #include <ESP8266WiFi.h>
-#include <Adafruit_Sensor.h>
 #include <BlynkSimpleEsp8266.h>
-char auth[] = "BLYNK AUTH CODE";
-char ssid[] = "WIFI SSID";
-char pass[] = "WIFI PASSWORD";
+
+char auth[] = "J6MWxtuU2fJr-UY3D4o6kUvIpJGhQh7R";
+char ssid[] = "Stads-Lab";
+char pass[] = "initialkey4iot";
+// char auth[] = "BLYNK AUTH CODE";
+// char ssid[] = "WIFI SSID";
+// char pass[] = "WIFI PASSWORD";
  
  
 //define DHT
@@ -41,7 +45,7 @@ const int echo = D1;
 long tijd;
 int afstand;
 long teller = 0;
-int telnummer = 25;
+int telnummer = 50;
 #define BLYNK_PRINT Serial
 WidgetLCD lcd(V1);
 WidgetLCD vlcd(V2);
